@@ -86,11 +86,10 @@ sortByAge(users)
 console.log(users)
 
 //?Перевірити, чи є серед користувачів користувач з email`ом useremail7@gmail.com
-const isCheckEmail = (users) => {
-	const user = users.find((user) => (user.eamil = 'useremail7@gmail.com'))
-	return user ? true : false
-}
-console.log(isCheckEmail(users))
+const isCheckEmail = users.some(
+	(user) => user.email === 'useremail987@gmail.com'
+)
+console.log(isCheckEmail)
 
 //?Перевірити, чи всі користувачі підписані (subscribed)
 const isAllSubscribed = (users) => users.every((user) => user.isSubscribed)
