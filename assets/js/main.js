@@ -41,9 +41,9 @@ const fullNames = users.map((user) => user.getFullName())
 console.log(fullNames)
 
 //?Отримати масив повних імен осіб жіночої статі шкільного віку (6 – 18 років)
-const schoolGirls = users.filter((user) => {
-	return user.isMale === false && user.age >= 6 && user.age <= 18
-})
+const schoolGirls = users
+	.filter((user) => !user.isMale && user.age >= 6 && user.age <= 18)
+	.map((user) => user.getFullName())
 console.log(schoolGirls)
 
 //?Видалити з масиву користувача з email  useremail5@gmail.com
