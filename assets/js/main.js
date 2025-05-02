@@ -33,7 +33,7 @@ User.prototype.getFullName = function () {
 console.log(users[5].getFullName())
 
 //?Отримати масив користувачів, які не підписані (not subscribed)
-const userIsSubscribed = users.filter((user) => user.isSubscribed)
+const userIsSubscribed = users.filter((user) => !user.isSubscribed)
 console.log(userIsSubscribed)
 
 //?Вивести список повних імен користувачів
